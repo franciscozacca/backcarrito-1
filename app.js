@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productosRouter = require('./routes/productos');
 var ventaRouter = require('./routes/venta');
+var categoriesRouter = require('./routes/categories');
 
 
 var app = express();
@@ -28,6 +29,7 @@ app.use('/users', usersRouter);
 //app.use('/productos',validateUser, productosRouter);
 app.use('/productos', productosRouter);
 app.use('/venta', ventaRouter);
+app.use('/category', ventaRouter);
 
 
 function validateUser(req,res,next){
